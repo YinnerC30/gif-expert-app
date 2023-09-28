@@ -7,26 +7,30 @@ describe("Pruebas en el componente AddCategory", () => {
     const input = screen.getByRole("textbox");
     fireEvent.input(input, { target: { value: "saitama" } });
     expect(input.value).toBe("saitama");
-    // screen.debug();
+    screen.debug();
   });
 
-  test("Debe llamar onNewCategory si el input tiene un valor", () => {
-    const inputValue = "saitama";
-    const onNewCategory = jest.fn;
+  test("debe de llamar onNewCategory si el input tiene un valor", () => {
+    const inputValue = "Saitama";
+    const onNewCategory = jest.fn();
+
     render(<AddCategory onNewCategory={onNewCategory} />);
+
     const input = screen.getByRole("textbox");
     const form = screen.getByRole("form");
 
     fireEvent.input(input, { target: { value: inputValue } });
     fireEvent.submit(form);
+    // screen.debug();
     expect(input.value).toBe("");
+
     expect(onNewCategory).toHaveBeenCalled();
     expect(onNewCategory).toHaveBeenCalledTimes(1);
     expect(onNewCategory).toHaveBeenCalledWith(inputValue);
   });
 
-  test("No debe llamar a onNewCategory si el input esta vació", () => {
-    const onNewCategory = jest.fn;
+  test("no debe de llamar el onNewCategory si el input está vació", () => {
+    const onNewCategory = jest.fn();
     render(<AddCategory onNewCategory={onNewCategory} />);
 
     const form = screen.getByRole("form");
