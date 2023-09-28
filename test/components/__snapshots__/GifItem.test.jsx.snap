@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas del componente GifItem Toma de Snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Dragon Ball GIF by Toei Animation"
+      src="https://media2.giphy.com/media/GRSnxyhJnPsaQy9YLn/giphy.gif?cid=e52640fbrd5a6w92knd1zoivuwja3wyhb6mmkul1a0m1hiwg&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+    />
+    <p>
+      Dragon Ball GIF by Toei Animation
+    </p>
+  </div>
+</div>
+`;
