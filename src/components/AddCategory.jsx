@@ -22,6 +22,9 @@ export const AddCategory = ({ onNewCategory }) => {
           value={inputValue}
           onChange={onInputChange}
         />
+        <button className="button" onClick={onSubmit}>
+          Enviar
+        </button>
       </form>
     </>
   );
